@@ -28,3 +28,5 @@ function palindrome(x){
 
 console.log(palindrome(121))
 console.log(palindrome(1234))
+console.log(palindrome(1))
+console.log(palindrome(-121))
