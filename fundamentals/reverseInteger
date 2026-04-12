@@ -1,0 +1,34 @@
+// Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-2^31, 2^31 - 1], then return 0.
+
+//reversing a number is similar to the palindrome problem but the issue is the negative number
+//if -123 it shoould return -321
+
+//so for that we make the copy of original and if it was negative, at end we add the negative sign
+
+//also there is the limit to the number begin reverse
+
+function reverseInteger(x) {
+
+    let original = x;
+    let rev = 0;
+
+    // Convert to positive
+    x = Math.abs(x);
+
+    while (x > 0) {
+        let digit = x % 10;
+        rev = rev * 10 + digit;
+        x = Math.floor(x / 10);
+    }
+    
+    let limit = Math.pow(2,31) //2147483648
+    // let limit = 2**31
+    if(rev < -limit || rev > limit) return 0
+
+    // Restore sign
+    if(original < 0){
+        return -rev
+    }
+    else {return rev}
+}
+console.log(reverseInteger(-111812124))
