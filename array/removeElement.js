@@ -12,7 +12,7 @@ function removeElement(arr,val){
     for (let i = 0; i < arr.length; i++) {
         
         if (arr[i] !== val) { 
-            arr[x] = arr[i] 
+            arr[x] = arr[i]  //if the element is not equal to the val then move the element to x position //shift to left
             x++;          
         }
     }
