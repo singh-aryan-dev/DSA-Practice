@@ -9,9 +9,9 @@ function removeDuplicate(arr){
 
     for (let i = 1; i < arr.length; i++) {
         
-        if (arr[i] != arr[x]) {
-            x = x + 1;
-            arr[x] = arr[i]
+        if (arr[i] !== arr[x]) { //different from the last unique element //also x points to last unique element    
+            x++;          // moves the x to next position 
+            arr[x] = arr[i]     // replace the element with unique element // at the place of x we put the i(unique) element
         }
 
     }
