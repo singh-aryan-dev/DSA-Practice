@@ -16,8 +16,9 @@ function removeElement(arr,val){
             x++;          
         }
     }
-    //return x     //returns the count of element removed
-
+    //returns the count of element removed 
+    //return x    //output: 2
+    
     //return the array with only remaining element
     return arr.slice(0, x);
 };
