@@ -15,8 +15,8 @@ function palindrome(x){
     let xCopy = x; //also to make the copy of the number to compare with reversed number
 
     while(x > 0){
-        let digit = x % 10;
-        rev = rev * 10 + digit;
+        let digit = x % 10;  //gets the last digit
+        rev = rev * 10 + digit;  //add the last digit to variable
         x = Math.floor(x/10); // removes the last digit 
     }
     if (rev == xCopy) {
