@@ -204,3 +204,20 @@
 //      i++;
 // }
 
+//rotate array to left means first element to the last and rest shift to leftfunction rotateLeft(arr) {
+//   let n = arr.length;
+//   let first = arr[0];
+
+//   // shift elements left
+//   for (let i = 0; i < n - 1; i++) {
+//     arr[i] = arr[i + 1];
+//   }
+
+//   // put first element at last
+//   arr[n - 1] = first;
+
+//   return arr;
+// }
+
+// console.log(rotateLeft([1, 2, 3, 4]));
+// Output: [2, 3, 4, 1]
